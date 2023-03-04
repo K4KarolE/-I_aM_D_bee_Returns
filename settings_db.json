@@ -1,0 +1,44 @@
+{
+  "imdb_link_in_clipboard": 1,
+  "poster_open_in_new_tab": 0,
+  "poster_size": "Small",
+  "title_search": 0,
+  "quit_after_run": 0,
+  "no_picture_in_sheet": 1,
+  "title_search_link_selected": "Hungarian",
+  "title_search_links": {
+    "Czech": "https://www.csfd.cz/hledat/?q=",
+    "French": "https://www.allocine.fr/rechercher/?q=",
+    "German": "https://www.moviepilot.de/suche?q=",
+    "Hungarian": "https://www.mafab.hu/search/&search="
+  },
+  "path_movies_db_sheet": "",
+  "path_movie_new_record": "D:/Movies_New_Record.xlsx",
+  "skin_selected": "default",
+  "skins": {
+    "darth": {
+      "background_color": "black",
+      "field_background_color": "black",
+      "font_style": "Georgia",
+      "font_color": "red",
+      "window_title": "Hunny for Force",
+      "error_window_title": "Your thoughts betray you.."
+    },
+    "default": {
+      "background_color": "#E6B91E",
+      "field_background_color": "#E6B91E",
+      "font_style": "Georgia",
+      "font_color": "black",
+      "window_title": "Hunny for Life",
+      "error_window_title": "Danger Will Robinson, danger!"
+    },
+    "dredd": {
+      "background_color": "black",
+      "field_background_color": "black",
+      "font_style": "Georgia",
+      "font_color": "red",
+      "window_title": "Hunny for Justice",
+      "error_window_title": "You betrayed the Law!"
+    }
+  }
+}

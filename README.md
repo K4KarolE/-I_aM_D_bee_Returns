@@ -1,2 +1,2 @@
-# -I_aM_D_bee_Returns
-Movie details collection app using IMDb and TMDB API - Work in progress
+# I aM D bee Returns
+## Movie details collection app using IMDb and TMDB API - Work in progress
