@@ -18,9 +18,9 @@ def data_collection():
     file.close()
 
 ### GET LINK / IMDB ID - will be from clipboard
-    link = 'https://www.imdb.com/find/tt7366338/?ref_=adv_li_tt' # Chern. - TV
+    # link = 'https://www.imdb.com/find/tt7366338/?ref_=adv_li_tt' # Chern. - TV
     # link = 'https://www.imdb.com/find/tt0106697/?ref_=nv_sr_srsg_0' # Dem. man
-    # link = 'https://www.imdb.com/title/tt0120855/?ref_=nv_sr_srsg_0' # Tarzan - multiple directors
+    link = 'https://www.imdb.com/title/tt0120855/?ref_=nv_sr_srsg_0' # Tarzan - multiple directors
     link_split= link.split('/')
 
     for i in link_split:
@@ -139,7 +139,7 @@ def data_collection():
     for item in posters:
         poster_links.append(f'https://image.tmdb.org/t/p/w200{item}')
 
-    with open('images.json', 'w') as f:
-        json.dump(response.json(), f, indent=2)
+    with open(path_json('poster_links.json'), 'w') as f:
+        json.dump(poster_links, f, indent=2)
 
     return title, year_of_release, directors, actors, genres, lengthHour, lengthMinute

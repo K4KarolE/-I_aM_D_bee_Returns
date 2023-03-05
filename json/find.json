@@ -1,29 +1,30 @@
 {
-  "movie_results": [],
-  "person_results": [],
-  "tv_results": [
+  "movie_results": [
     {
       "adult": false,
-      "backdrop_path": "/900tHlUYUkp7Ol04XFSoAaEIXcT.jpg",
-      "id": 87108,
-      "name": "Chernobyl",
+      "backdrop_path": "/3Skg7e94WFreLgQAR0PAYSk0Zv1.jpg",
+      "id": 37135,
+      "title": "Tarzan",
       "original_language": "en",
-      "original_name": "Chernobyl",
-      "overview": "The true story of one of the worst man-made catastrophes in history: the catastrophic nuclear accident at Chernobyl. A tale of the brave men and women who sacrificed to save Europe from unimaginable disaster.",
-      "poster_path": "/hlLXt2tOPT6RRnjiUmoxyG1LTFi.jpg",
-      "media_type": "tv",
+      "original_title": "Tarzan",
+      "overview": "Tarzan was a small orphan who was raised by an ape named Kala since he was a child. He believed that this was his family, but on an expedition Jane Porter is rescued by Tarzan. He then finds out that he's human. Now Tarzan must make the decision as to which family he should belong to...",
+      "poster_path": "/ceGk1VcuI8pSXQhSlnqsqTFCPLD.jpg",
+      "media_type": "movie",
       "genre_ids": [
+        10751,
+        12,
+        16,
         18
       ],
-      "popularity": 62.125,
-      "first_air_date": "2019-05-06",
-      "vote_average": 8.625,
-      "vote_count": 4833,
-      "origin_country": [
-        "US"
-      ]
+      "popularity": 77.589,
+      "release_date": "1999-06-18",
+      "video": false,
+      "vote_average": 7.398,
+      "vote_count": 5984
     }
   ],
+  "person_results": [],
+  "tv_results": [],
   "tv_episode_results": [],
   "tv_season_results": []
 }
