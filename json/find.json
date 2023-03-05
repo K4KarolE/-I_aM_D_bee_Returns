@@ -1,0 +1,29 @@
+{
+  "movie_results": [],
+  "person_results": [],
+  "tv_results": [
+    {
+      "adult": false,
+      "backdrop_path": "/900tHlUYUkp7Ol04XFSoAaEIXcT.jpg",
+      "id": 87108,
+      "name": "Chernobyl",
+      "original_language": "en",
+      "original_name": "Chernobyl",
+      "overview": "The true story of one of the worst man-made catastrophes in history: the catastrophic nuclear accident at Chernobyl. A tale of the brave men and women who sacrificed to save Europe from unimaginable disaster.",
+      "poster_path": "/hlLXt2tOPT6RRnjiUmoxyG1LTFi.jpg",
+      "media_type": "tv",
+      "genre_ids": [
+        18
+      ],
+      "popularity": 62.125,
+      "first_air_date": "2019-05-06",
+      "vote_average": 8.625,
+      "vote_count": 4833,
+      "origin_country": [
+        "US"
+      ]
+    }
+  ],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}
