@@ -1,16 +1,18 @@
 import requests
 import json
 
+# API KEY
+api_key = open('api_key.txt').read()
+
+# GET LINK / IMDB ID - will be from clipboard
 link = 'https://www.imdb.com/find/tt7366338/?ref_=adv_li_tt' # Chern. - TV
-link = 'https://www.imdb.com/find/tt0106697/?ref_=nv_sr_srsg_0' # Dem. man
+# link = 'https://www.imdb.com/find/tt0106697/?ref_=nv_sr_srsg_0' # Dem. man
 # link = 'https://www.imdb.com/title/tt0120855/?ref_=nv_sr_srsg_0' # Tarzan - multiple directors
 link_split= link.split('/')
 
 for i in link_split:
     if i[0:2] == 'tt':
         imdb_id = i
-
-api_key = ''
 
 ## FIND
 link_find = f'https://api.themoviedb.org/3/find/{imdb_id}?api_key={api_key}&language=en-US&external_source=imdb_id'
@@ -37,6 +39,9 @@ title = find_dic[find_dic_active][0][title_name]
 original_title = find_dic[find_dic_active][0][title_name_original]
 id = find_dic[find_dic_active][0]["id"]
 media_type = find_dic[find_dic_active][0]["media_type"] # movie / tv
+
+if title != original_title:
+    title = f'{title}\n({original_title})'
 
 
 ### DETAILS
