@@ -2,25 +2,23 @@
   "movie_results": [
     {
       "adult": false,
-      "backdrop_path": "/3Skg7e94WFreLgQAR0PAYSk0Zv1.jpg",
-      "id": 37135,
-      "title": "Tarzan",
+      "backdrop_path": "/uEoaOfvWibpvjBNxFoj4MxWn0OH.jpg",
+      "id": 10377,
+      "title": "My Cousin Vinny",
       "original_language": "en",
-      "original_title": "Tarzan",
-      "overview": "Tarzan was a small orphan who was raised by an ape named Kala since he was a child. He believed that this was his family, but on an expedition Jane Porter is rescued by Tarzan. He then finds out that he's human. Now Tarzan must make the decision as to which family he should belong to...",
-      "poster_path": "/ceGk1VcuI8pSXQhSlnqsqTFCPLD.jpg",
+      "original_title": "My Cousin Vinny",
+      "overview": "Two carefree pals traveling through Alabama are mistakenly arrested, and charged with murder. Fortunately, one of them has a cousin who's a lawyer - Vincent Gambini, a former auto mechanic from Brooklyn who just passed his bar exam after his sixth try. When he arrives with his leather-clad girlfriend, to try his first case, it's a real shock - for him and the Deep South!",
+      "poster_path": "/iwSURa8nS2ujwrU3s1lfxxX7voH.jpg",
       "media_type": "movie",
       "genre_ids": [
-        10751,
-        12,
-        16,
-        18
+        35,
+        80
       ],
-      "popularity": 77.589,
-      "release_date": "1999-06-18",
+      "popularity": 18.188,
+      "release_date": "1992-03-13",
       "video": false,
-      "vote_average": 7.398,
-      "vote_count": 5984
+      "vote_average": 7.479,
+      "vote_count": 1270
     }
   ],
   "person_results": [],

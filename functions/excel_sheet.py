@@ -53,7 +53,7 @@ def write_sheet(title, year_of_release, directors, actors, genres, lengthHour, l
 # MOVIE LENGTH
     cellLengthHour = 'Q' + str(cellnumber)
     ws[cellLengthHour].value = None                 # removing the previous value from the cell
-    if lengthHour != None:
+    if lengthHour != None and lengthHour != 0:
             ws[cellLengthHour].value = str(lengthHour)
 
     cellLengthMin = 'R' + str(cellnumber)

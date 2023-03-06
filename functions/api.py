@@ -1,7 +1,12 @@
+import sys
+import pyperclip
 import requests
 import json
 import os
 from pathlib import Path
+
+from functions import messages
+
 
 functions_directory = os.path.dirname(__file__)     # os.path.dirname(__file__) = D:\_DEV\Python\31_I_aM_D_bee\functions   //in my case
 main_directory = functions_directory.replace("functions",'')
@@ -17,10 +22,23 @@ def data_collection():
     api_key = file.read()
     file.close()
 
-### GET LINK / IMDB ID - will be from clipboard
-    # link = 'https://www.imdb.com/find/tt7366338/?ref_=adv_li_tt' # Chern. - TV
-    # link = 'https://www.imdb.com/find/tt0106697/?ref_=nv_sr_srsg_0' # Dem. man
-    link = 'https://www.imdb.com/title/tt0120855/?ref_=nv_sr_srsg_0' # Tarzan - multiple directors
+### GET LINK / IMDB ID
+    # link = pyperclip.paste()
+    # counter = 0
+    # while 'tt' not in link:     # IMDb id: tt7366338
+    #     counter += 1
+    #     messages.error_pop_up('wrong_link')
+    #     link = pyperclip.paste()
+    #     if counter == 2:
+    #         messages.error_pop_up('bye_bye')
+    #         sys.exit()
+ 
+
+    # link = 'https://www.imdb.com/find/tt7366338/?ref_=adv_li_tt'      # Chern. - TV Series
+    # link = 'https://www.imdb.com/find/tt0106697/?ref_=nv_sr_srsg_0'   # Dem. man
+    # link = 'https://www.imdb.com/title/tt0120855/?ref_=nv_sr_srsg_0'  # Tarzan - multiple directors
+    link = 'https://www.imdb.com/title/tt15318872/?ref_=adv_li_tt'      # Werewolf w. - TV Movie
+    link = 'https://www.imdb.com/title/tt0104952/?ref_=nv_sr_srsg_0'    # My Cousin - 2h
     link_split= link.split('/')
 
     for i in link_split:
@@ -87,7 +105,9 @@ def data_collection():
         runtime = details_dic['runtime']
     else:
         runtime = details_dic['episode_run_time'][0]
-    lengthHour = int(runtime/60)
+    
+
+    lengthHour = int(runtime/60)    # if runtime < 60 -> lengthHour = 0 addressed in excel_sheet.py, will leave it None
     lengthMinute = runtime%60
 
 

@@ -1,57 +1,50 @@
 {
   "adult": false,
-  "backdrop_path": "/3Skg7e94WFreLgQAR0PAYSk0Zv1.jpg",
-  "belongs_to_collection": {
-    "id": 106768,
-    "name": "Tarzan (Animation) Collection",
-    "poster_path": "/u8KeFKJma0ZbuaOlBUuMOCPN3u8.jpg",
-    "backdrop_path": "/niNBthrQBTWZJFshrqjqD4bqLtI.jpg"
-  },
-  "budget": 130000000,
+  "backdrop_path": "/uEoaOfvWibpvjBNxFoj4MxWn0OH.jpg",
+  "belongs_to_collection": null,
+  "budget": 11000000,
   "genres": [
     {
-      "id": 10751,
-      "name": "Family"
+      "id": 35,
+      "name": "Comedy"
     },
     {
-      "id": 12,
-      "name": "Adventure"
-    },
-    {
-      "id": 16,
-      "name": "Animation"
-    },
-    {
-      "id": 18,
-      "name": "Drama"
+      "id": 80,
+      "name": "Crime"
     }
   ],
   "homepage": "",
-  "id": 37135,
-  "imdb_id": "tt0120855",
+  "id": 10377,
+  "imdb_id": "tt0104952",
   "original_language": "en",
-  "original_title": "Tarzan",
-  "overview": "Tarzan was a small orphan who was raised by an ape named Kala since he was a child. He believed that this was his family, but on an expedition Jane Porter is rescued by Tarzan. He then finds out that he's human. Now Tarzan must make the decision as to which family he should belong to...",
-  "popularity": 77.589,
-  "poster_path": "/ceGk1VcuI8pSXQhSlnqsqTFCPLD.jpg",
+  "original_title": "My Cousin Vinny",
+  "overview": "Two carefree pals traveling through Alabama are mistakenly arrested, and charged with murder. Fortunately, one of them has a cousin who's a lawyer - Vincent Gambini, a former auto mechanic from Brooklyn who just passed his bar exam after his sixth try. When he arrives with his leather-clad girlfriend, to try his first case, it's a real shock - for him and the Deep South!",
+  "popularity": 18.188,
+  "poster_path": "/iwSURa8nS2ujwrU3s1lfxxX7voH.jpg",
   "production_companies": [
     {
-      "id": 2,
-      "logo_path": "/wdrCwmRnLFJhEoH8GSfymY85KHT.png",
-      "name": "Walt Disney Pictures",
-      "origin_country": "US"
-    },
-    {
-      "id": 13730,
+      "id": 89303,
       "logo_path": null,
-      "name": "Edgar Rice Burroughs Inc.",
+      "name": "Palo Vista Productions",
       "origin_country": ""
     },
     {
-      "id": 171656,
+      "id": 89304,
       "logo_path": null,
-      "name": "Walt Disney Feature Animation",
+      "name": "Peter V. Miller Investment Corp.",
+      "origin_country": ""
+    },
+    {
+      "id": 25,
+      "logo_path": "/qZCc1lty5FzX30aOCVRBLzaVmcp.png",
+      "name": "20th Century Fox",
       "origin_country": "US"
+    },
+    {
+      "id": 174491,
+      "logo_path": null,
+      "name": "Dale Launer Production",
+      "origin_country": ""
     }
   ],
   "production_countries": [
@@ -60,9 +53,9 @@
       "name": "United States of America"
     }
   ],
-  "release_date": "1999-06-18",
-  "revenue": 448191819,
-  "runtime": 88,
+  "release_date": "1992-03-13",
+  "revenue": 64088552,
+  "runtime": 120,
   "spoken_languages": [
     {
       "english_name": "English",
@@ -71,9 +64,9 @@
     }
   ],
   "status": "Released",
-  "tagline": "An immortal legend. As you've only imagined.",
-  "title": "Tarzan",
+  "tagline": "Truth, Justice and the Gambini Way.",
+  "title": "My Cousin Vinny",
   "video": false,
-  "vote_average": 7.398,
-  "vote_count": 5985
+  "vote_average": 7.479,
+  "vote_count": 1270
 }
