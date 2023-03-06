@@ -6,9 +6,11 @@ import os
 from pathlib import Path
 
 from functions import messages
+from functions import settings
 
 
-functions_directory = os.path.dirname(__file__)     # os.path.dirname(__file__) = D:\_DEV\Python\31_I_aM_D_bee\functions   //in my case
+
+functions_directory = os.path.dirname(__file__)     # = D:\_DEV\Python\MODDEC\functions   //in my case
 main_directory = functions_directory.replace("functions",'')
 
 def path_json(name_json):
@@ -16,6 +18,8 @@ def path_json(name_json):
     return path_json   
 
 def data_collection():
+    settings_data = settings.open_settings()
+
     # API KEY
     path_api_key = Path(main_directory, 'api_key.txt')
     file = open(path_api_key)
@@ -33,13 +37,6 @@ def data_collection():
             messages.error_pop_up('bye_bye')
             sys.exit()
  
-
-    # # link = 'https://www.imdb.com/find/tt7366338/?ref_=adv_li_tt'      # Chern. - TV Series
-    # # link = 'https://www.imdb.com/find/tt0106697/?ref_=nv_sr_srsg_0'   # Dem. man
-    # # link = 'https://www.imdb.com/title/tt0120855/?ref_=nv_sr_srsg_0'  # Tarzan - multiple directors
-    # link = 'https://www.imdb.com/title/tt15318872/?ref_=adv_li_tt'      # Werewolf w. - TV Movie
-    # link = 'https://www.imdb.com/title/tt0104952/?ref_=nv_sr_srsg_0'    # My Cousin - 2h
-
     link_split= link.split('/')
     for i in link_split:
         if i[0:2] == 'tt':
@@ -139,27 +136,33 @@ def data_collection():
 
 
 ### IMAGES
-    link_images = f'https://api.themoviedb.org/3/{media_type}/{id}/images?api_key={api_key}'
-    response = requests.get(link_images)
+    if settings_data['poster_open_in_new_tab'] == 1:
+        link_images = f'https://api.themoviedb.org/3/{media_type}/{id}/images?api_key={api_key}'
+        response = requests.get(link_images)
 
-    # SAVE, LOAD 'IMAGES' RESPONSE
-    with open(path_json('images.json'), 'w') as f:
-        json.dump(response.json(), f, indent=2)
+        # SAVE, LOAD 'IMAGES' RESPONSE
+        with open(path_json('images.json'), 'w') as f:
+            json.dump(response.json(), f, indent=2)
 
-    f = open(path_json('images.json'))
-    images_dic = json.load(f)
+        f = open(path_json('images.json'))
+        images_dic = json.load(f)
 
-    # POSTERS
-    posters = []
-    for item in images_dic["posters"]:
-        if item["iso_639_1"] == "en":
-            posters.append(item["file_path"])
+        # POSTERS
+        posters = []
+        for item in images_dic["posters"]:
+            if item["iso_639_1"] == "en":
+                posters.append(item["file_path"])
 
-    poster_links = []
-    for item in posters:
-        poster_links.append(f'https://image.tmdb.org/t/p/w200{item}')
+        poster_links = []    
+        selected_poster_size = settings_data['poster_size']     # Small, Medium...
+        selected_poster_size_value = settings_data["poster_size_options"][selected_poster_size]     # w200 - Small, w500 - Medium, original - Large
+        for item in posters:
+            try:
+                poster_links.append(f'https://image.tmdb.org/t/p/{selected_poster_size_value}{item}')
+            except:
+                print(f'FAILED popster link to add: https://image.tmdb.org/t/p/{selected_poster_size_value}{item}')
 
-    with open(path_json('poster_links.json'), 'w') as f:
-        json.dump(poster_links, f, indent=2)
+        with open(path_json('poster_links.json'), 'w') as f:
+            json.dump(poster_links, f, indent=2)
 
     return title, year_of_release, directors, actors, genres, lengthHour, lengthMinute

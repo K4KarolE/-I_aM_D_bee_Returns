@@ -101,8 +101,6 @@ def launch_sheets():
     if platform.system() == 'Windows':
         settings_data = settings.open_settings()                                # opening the settings_db.json DB
         full_path_to_MoviesNewRecord = settings_data['path_movie_new_record']
-        full_path_to_Movies = settings_data['path_movies_db_sheet']
-        os.system(f'start "excel" {full_path_to_Movies}')
         os.system(f'start "excel" {full_path_to_MoviesNewRecord}')
     if platform.system() == 'Linux':
         messages.error_pop_up('excel_is_saved')

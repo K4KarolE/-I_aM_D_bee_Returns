@@ -1,25 +1,21 @@
 {
-  "imdb_link_in_clipboard": 1,
-  "poster_open_in_new_tab": 0,
-  "title_search": 1,
+  "poster_open_in_new_tab": 1,
+  "title_search": 0,
   "quit_after_run": 0,
-  "no_picture_in_sheet": 1,
   "poster_size_options": {
-    "Small": 0,
-    "Medium": 2,
-    "Larger": 4
+    "Small": "w200",
+    "Medium": "w500",
+    "Large": "original"
   },
-  "poster_size": "Small",
-  "title_search_link_selected": "French",
+  "poster_size": "Large",
+  "title_search_link_selected": "Czech",
   "title_search_links": {
     "Czech": "https://www.csfd.cz/hledat/?q=",
     "French": "https://www.allocine.fr/rechercher/?q=",
     "German": "https://www.moviepilot.de/suche?q=",
     "Hungarian": "https://www.mafab.hu/search/&search="
   },
-  "path_chrome_driver": "C:/ChromeDriver/chromedriver.exe",
-  "path_movies_db_sheet": "",
-  "path_movie_new_record": " - - MANDATORY - -",
+  "path_movie_new_record": "D:/Movies_New_Record.xlsx",
   "skin_selected": "initech",
   "skins": {
     "initech": {
@@ -40,6 +36,5 @@
       "window_title": "1809246 - CM-88B Bison - Lockmart",
       "error_window_title": "Is this good for the Company?"
     }
-  },
-  "run_by_start": 0
+  }
 }

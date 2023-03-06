@@ -65,7 +65,8 @@ for item in checkbox.values():
         background=background_color,
         activeforeground = font_color,
         activebackground=background_color,   # activebackground - color when clicked
-        highlightbackground=background_color
+        highlightbackground=background_color,
+        selectcolor=window_background_color     # background color of the box
         )
 
 
@@ -101,7 +102,7 @@ def change_skin(__):
 
     # CHECKBOXES
     for item in checkbox.values():
-        item[1].configure(foreground=font_color, background=background_color, activeforeground = font_color, activebackground=background_color, highlightbackground=background_color)
+        item[1].configure(foreground=font_color, background=background_color, activeforeground = font_color, activebackground=background_color, highlightbackground=background_color, selectcolor=window_background_color)
     
     # ROLL DOWN MENUS
     skins_roll_down.configure(foreground=font_color, background=background_color, activeforeground=font_color, activebackground=background_color, highlightbackground=background_color)
