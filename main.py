@@ -25,7 +25,7 @@ window_background_color = settings_data['skins'][skin_selected]['window_backgrou
 
 # WINDOW
 window = Tk()
-window.configure(background=window_background_color)
+# window.configure(background=window_background_color) FYI - not necessery / not working if the image background color is set
 window.title(settings_data['skins'][skin_selected]['window_title'])
 window_width = 500
 window_length = 600
@@ -93,20 +93,25 @@ def change_skin(__):
     ##COLORS
     background_color = settings_data['skins'][skin_selected]['background_color']
     font_color = settings_data['skins'][skin_selected]['font_color']
+    window_background_color = settings_data['skins'][skin_selected]['window_background_color']
     
+    # WINDOW
+    # window.configure(background=window_background_color) FYI - not necessery / not working if the image background color is set
+    backgound_image_label.configure(background=window_background_color)
+
     # CHECKBOXES
     for item in checkbox.values():
         item[1].configure(foreground=font_color, background=background_color, activeforeground = font_color, activebackground=background_color, highlightbackground=background_color)
     
     # ROLL DOWN MENUS
     skins_roll_down.configure(foreground=font_color, background=background_color, activeforeground=font_color, activebackground=background_color, highlightbackground=background_color)
-    skins_roll_down['menu'].configure(foreground=font_color, background=background_color, activebackground=background_color, activeforeground = "white")
+    skins_roll_down['menu'].configure(foreground=font_color, background=background_color, activebackground=font_color, activeforeground = window_background_color)
 
     title_search_roll_down.configure(foreground=font_color, background=background_color, activeforeground=font_color, activebackground=background_color, highlightbackground=background_color)
-    title_search_roll_down['menu'].configure(foreground=font_color, background=background_color, activeforeground = "white", activebackground=background_color)
+    title_search_roll_down['menu'].configure(foreground=font_color, background=background_color, activeforeground = window_background_color, activebackground=font_color)
 
     poster_roll_down.config(foreground=font_color, background=background_color, activeforeground=font_color, activebackground=background_color, highlightbackground=background_color)
-    poster_roll_down["menu"].config(foreground=font_color, background=background_color, activeforeground = "white", activebackground=background_color)
+    poster_roll_down["menu"].config(foreground=font_color, background=background_color, activeforeground = window_background_color, activebackground=font_color)
 
     # PATH - FIELDS + SEARCHBOXES
     target_sheet_field.configure(foreground=font_color, background=background_color)
@@ -126,7 +131,7 @@ skins_roll_down_clicked = StringVar()
 skins_roll_down_clicked.set("Skins")    
 skins_roll_down = OptionMenu( window, skins_roll_down_clicked, *skins_options, command=change_skin)     
 skins_roll_down.configure(foreground=font_color, background=background_color, activeforeground = font_color, activebackground=background_color, highlightbackground=background_color)
-skins_roll_down['menu'].configure(foreground=font_color, background=background_color, activebackground=background_color)
+skins_roll_down['menu'].configure(foreground=font_color, background=background_color, activebackground=font_color, activeforeground = window_background_color)
 
 # TITLE SEARCH - ROLL DOWN MENU
 title_search_options = []
@@ -138,7 +143,7 @@ title_search_roll_down_clicked = StringVar()
 title_search_roll_down_clicked.set(settings_data['title_search_link_selected'])   # set to the latest saved value (Hungarian / Czech /..)
 title_search_roll_down = OptionMenu( window, title_search_roll_down_clicked, *title_search_options )
 title_search_roll_down.configure(foreground=font_color, background=background_color, activeforeground = font_color, activebackground=background_color, highlightbackground=background_color)
-title_search_roll_down['menu'].configure(foreground=font_color, background=background_color, activebackground=background_color)
+title_search_roll_down['menu'].configure(foreground=font_color, background=background_color, activebackground=font_color, activeforeground = window_background_color)
 
 # POSTER SIZE - ROLL DOWN MENU
 poster_size_options = []
@@ -149,7 +154,7 @@ poster_roll_down_clicked = StringVar()
 poster_roll_down_clicked.set(settings_data['poster_size'])       # # set to the latest saved value
 poster_roll_down = OptionMenu( window, poster_roll_down_clicked, *poster_size_options)
 poster_roll_down.config(foreground=font_color, background=background_color, activeforeground = font_color, activebackground=background_color, highlightbackground=background_color)
-poster_roll_down["menu"].config(foreground=font_color, background=background_color, activebackground=background_color)
+poster_roll_down["menu"].config(foreground=font_color, background=background_color, activebackground=font_color, activeforeground = window_background_color)
 
 
 ## PATH - FIELDS + SEARCHBOXES

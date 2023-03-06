@@ -19,8 +19,8 @@
   },
   "path_chrome_driver": "C:/ChromeDriver/chromedriver.exe",
   "path_movies_db_sheet": "",
-  "path_movie_new_record": "D:/Movies_New_Record.xlsx",
-  "skin_selected": "nostromo",
+  "path_movie_new_record": " - - MANDATORY - -",
+  "skin_selected": "initech",
   "skins": {
     "initech": {
       "background_color": "#F0F0F0",
@@ -32,11 +32,11 @@
       "error_window_title": "Is this good for the Company?"
     },
     "nostromo": {
-      "background_color": "#F0F0F0",
-      "field_background_color": "#F0F0F0",
-      "window_background_color": "#F0F0F0",
+      "background_color": "#202020",
+      "field_background_color": "#202020",
+      "window_background_color": "#202020",
       "font_style": "Georgia",
-      "font_color": "#404040",
+      "font_color": "#E3A830",
       "window_title": "1809246 - CM-88B Bison - Lockmart",
       "error_window_title": "Is this good for the Company?"
     }
