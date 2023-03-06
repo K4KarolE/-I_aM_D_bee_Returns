@@ -12,4 +12,4 @@ def start_engine():     # executed with the "Save & Start" button click in main
 
     excel_sheet.launch_sheets()
 
-start_engine()
+# start_engine()
