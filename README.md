@@ -6,7 +6,7 @@
 
 <img src="docs/guide/target_sheet.png"> 
 
-<!-- 
+
 - Automatically opens the sheet
 - If selected: 
     - Movie posters will be listed in a new browser tab
@@ -21,6 +21,7 @@
     <img src="docs/promo/nostromo.png" </img> 
 </div>
 
+<!-- 
 # Requirements
 ## Python and Modules
 ### Install packages\dependencies
