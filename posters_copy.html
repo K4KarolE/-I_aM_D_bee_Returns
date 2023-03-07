@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- <img id="myImage" src="">
+
+<div id="my-text-box"> </div> -->
+
+<script>
+    import { createRequire } from 'module';
+    const require = createRequire(import.meta.url);
+    
+    const fs = require('fs');
+    fs.readFile('data.txt', 'utf8', (err, data) => {
+        if(err){
+            console.error(err);
+            return;
+        }
+        console.log(data);
+    });
+
+
+
+
+</script>
+
+</body>
+</html>

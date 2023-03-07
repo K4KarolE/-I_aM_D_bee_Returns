@@ -1,5 +1,6 @@
 {
-  "poster_open_in_new_tab": 1,
+  "title": "My Cousin Vinny",
+  "poster_open_in_new_tab": 0,
   "title_search": 0,
   "quit_after_run": 0,
   "poster_size_options": {
@@ -7,7 +8,7 @@
     "Medium": "w500",
     "Large": "original"
   },
-  "poster_size": "Large",
+  "poster_size": "Small",
   "title_search_link_selected": "Czech",
   "title_search_links": {
     "Czech": "https://www.csfd.cz/hledat/?q=",
@@ -34,7 +35,7 @@
       "font_style": "Georgia",
       "font_color": "#E3A830",
       "window_title": "1809246 - CM-88B Bison - Lockmart",
-      "error_window_title": "Is this good for the Company?"
+      "error_window_title": "Danger! The emergency destruct system is now activated!"
     }
   }
 }

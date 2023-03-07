@@ -71,6 +71,9 @@ def data_collection():
     if title != original_title:
         title = f'{title}\n({original_title})'
 
+    # SAVING TITLE
+    settings_data['title'] = title
+    settings.save_settings(settings_data)
 
 ### DETAILS
     link_details = f'https://api.themoviedb.org/3/{media_type}/{id}?api_key={api_key}&language=en-US'
@@ -121,18 +124,24 @@ def data_collection():
     credits_dic = json.load(f)
 
     # ACTORS
-    actors = []
-    i = 0
-    while i < 3:
-        actors.append(credits_dic['cast'][i]["name"])
-        i += 1
+    try:
+        actors = []
+        i = 0
+        while i < 3:
+            actors.append(credits_dic['cast'][i]["name"])
+            i += 1
+    except:
+        pass
 
     # DIRECTORS
-    directors = []
-    if media_type == 'movie':
-        for item in credits_dic['crew']:
-                if item["job"] == "Director":
-                    directors.append(item["name"])
+    try:
+        directors = []
+        if media_type == 'movie':
+            for item in credits_dic['crew']:
+                    if item["job"] == "Director":
+                        directors.append(item["name"])
+    except:
+        pass
 
 
 ### IMAGES

@@ -9,7 +9,7 @@ import platform                     # to check which OS is used
 import os
 from pathlib import Path
 
-import engine
+from functions import engine
 from functions import settings
 settings_data = settings.open_settings()        # access to the saved/default settings (settings_db.json)
 

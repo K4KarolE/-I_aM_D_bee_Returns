@@ -2,22 +2,23 @@
   "movie_results": [
     {
       "adult": false,
-      "backdrop_path": "/y1BomwRA41Cr8s69G9vVQRjwllp.jpg",
-      "id": 691179,
-      "title": "Friends: The Reunion",
+      "backdrop_path": "/uEoaOfvWibpvjBNxFoj4MxWn0OH.jpg",
+      "id": 10377,
+      "title": "My Cousin Vinny",
       "original_language": "en",
-      "original_title": "Friends: The Reunion",
-      "overview": "The cast of Friends reunites for a once-in-a-lifetime celebration of the hit series, an unforgettable evening filled with iconic memories, uncontrollable laughter, happy tears, and special guests.",
-      "poster_path": "/bT3c4TSOP8vBmMoXZRDPTII6eDa.jpg",
+      "original_title": "My Cousin Vinny",
+      "overview": "Two carefree pals traveling through Alabama are mistakenly arrested, and charged with murder. Fortunately, one of them has a cousin who's a lawyer - Vincent Gambini, a former auto mechanic from Brooklyn who just passed his bar exam after his sixth try. When he arrives with his leather-clad girlfriend, to try his first case, it's a real shock - for him and the Deep South!",
+      "poster_path": "/iwSURa8nS2ujwrU3s1lfxxX7voH.jpg",
       "media_type": "movie",
       "genre_ids": [
-        99
+        35,
+        80
       ],
-      "popularity": 26.979,
-      "release_date": "2021-05-27",
+      "popularity": 21.728,
+      "release_date": "1992-03-13",
       "video": false,
-      "vote_average": 7.936,
-      "vote_count": 1011
+      "vote_average": 7.479,
+      "vote_count": 1270
     }
   ],
   "person_results": [],
