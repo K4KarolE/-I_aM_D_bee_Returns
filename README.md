@@ -8,7 +8,7 @@
 - If selected: 
     - According to the selected poster size: html page will be generated and opened in a new browser tab
     - Searches for the movie on the selected, non-English movie site
-- Using [The Movie Database API](https://www.themoviedb.org/documentation/api) and `IMDb id/link`
+- Using [The Movie Database API](https://www.themoviedb.org/documentation/api) and `IMDb link or movie ID`
 - Inspired by my previous project: [I aM D bee](https://github.com/K4KarolE/I_aM_D_bee)
 
 <div align="center">
@@ -60,7 +60,7 @@ pip install -r requirements.txt
 
 # Guide
 ## Steps
-- Copy your selected motion picture's `IMDb` link or ID to your clipboard
+- Copy your selected motion picture's `IMDb link or ID` to your clipboard
 - Add the target excel sheet in `MODEC`
 - Set the non-mandatory paramaters as you wish (3 checkboxes, roll-down menus)
 - Click `Save&Start`
@@ -70,7 +70,7 @@ pip install -r requirements.txt
 - Most of the time even 1 season is directed by multiple directors
 
 ## Posters in new tab
-- The generated `poster.html` will be opened in a new browser tab
+- The generated `posters.html` will be opened in a new browser tab
 - Poster`s width size estimates: 
     - Small ~ 200px - 4/row
     - Medium ~ 500px - 2/row

@@ -40,7 +40,7 @@ def compose():
         if settings_data['poster_size'] == "Small":
             poster_per_row = 4
         if settings_data['poster_size'] == "Medium":
-            poster_per_row = 3
+            poster_per_row = 2
         if settings_data['poster_size'] == "Large":
             poster_per_row = 1
 
@@ -49,7 +49,9 @@ def compose():
         counter = 1
         for index, item in enumerate(poster_links_list):
             list_poster_template[element_index] += f'<img src={item} hspace="20">'
-            if index != 0 and counter % poster_per_row == 0:
+            if index != 0 and counter % poster_per_row == 0 and poster_per_row != 1:
+                list_poster_template[element_index] += '</div><br><div align="center">'
+            if poster_per_row == 1:
                 list_poster_template[element_index] += '</div><br><div align="center">'
             if index+1 == len(poster_links_list):
                 list_poster_template[element_index] += '</div>'
