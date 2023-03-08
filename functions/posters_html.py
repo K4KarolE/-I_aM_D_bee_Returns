@@ -67,6 +67,6 @@ def compose():
         file.close()
 
         # OPEN POSTER PAGE
-        webbrowser.open(path_posters_html)
+        webbrowser.open(str(path_posters_html))     # LINUX: not working without str()
 
 # compose()  #testing

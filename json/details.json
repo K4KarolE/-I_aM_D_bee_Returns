@@ -1,42 +1,40 @@
 {
   "adult": false,
-  "backdrop_path": "/4pl165EUdvveHCr4J4YcHVA1MnD.jpg",
+  "backdrop_path": "/y1BomwRA41Cr8s69G9vVQRjwllp.jpg",
   "belongs_to_collection": null,
-  "budget": 57000000,
+  "budget": 0,
   "genres": [
     {
-      "id": 80,
-      "name": "Crime"
-    },
-    {
-      "id": 28,
-      "name": "Action"
-    },
-    {
-      "id": 878,
-      "name": "Science Fiction"
+      "id": 99,
+      "name": "Documentary"
     }
   ],
-  "homepage": "http://www.warnerbros.com/demolition-man",
-  "id": 9739,
-  "imdb_id": "tt0106697",
+  "homepage": "https://play.hbomax.com/page/urn:hbo:page:GYJxCDACcN8PDewEAAAAG:type:feature",
+  "id": 691179,
+  "imdb_id": "tt11337862",
   "original_language": "en",
-  "original_title": "Demolition Man",
-  "overview": "Simon Phoenix, a violent criminal cryogenically frozen in 1996, escapes during a parole hearing in 2032 in the utopia of San Angeles. Police are incapable of dealing with his violent ways and turn to his captor, who had also been cryogenically frozen after being wrongfully accused of killing 30 innocent people while apprehending Phoenix.",
-  "popularity": 32.671,
-  "poster_path": "/pxWuGsyzVQSqHWxVQLy4XUcopIL.jpg",
+  "original_title": "Friends: The Reunion",
+  "overview": "The cast of Friends reunites for a once-in-a-lifetime celebration of the hit series, an unforgettable evening filled with iconic memories, uncontrollable laughter, happy tears, and special guests.",
+  "popularity": 25.819,
+  "poster_path": "/bT3c4TSOP8vBmMoXZRDPTII6eDa.jpg",
   "production_companies": [
     {
-      "id": 1885,
-      "logo_path": "/tXMFoE8AtNdnFzWOW0aCLwl7xxS.png",
-      "name": "Silver Pictures",
+      "id": 31810,
+      "logo_path": "/3oyBCnFO3tIRmny3yzYQpF5n2cS.png",
+      "name": "Bright/Kauffman/Crane Productions",
       "origin_country": "US"
     },
     {
-      "id": 174,
-      "logo_path": "/IuAlhI9eVC9Z8UQWOIDdWRKSEJ.png",
-      "name": "Warner Bros. Pictures",
+      "id": 115672,
+      "logo_path": "/ghpSKVOYyghyopvwO8tGumGM37x.png",
+      "name": "Warner Horizon Unscripted & Alternative Television",
       "origin_country": "US"
+    },
+    {
+      "id": 5505,
+      "logo_path": "/bo3CWheRp7to1hpkMM45DWuKsBH.png",
+      "name": "Fulwell 73",
+      "origin_country": ""
     }
   ],
   "production_countries": [
@@ -45,9 +43,9 @@
       "name": "United States of America"
     }
   ],
-  "release_date": "1993-10-08",
-  "revenue": 58055768,
-  "runtime": 115,
+  "release_date": "2021-05-27",
+  "revenue": 0,
+  "runtime": 104,
   "spoken_languages": [
     {
       "english_name": "English",
@@ -56,9 +54,9 @@
     }
   ],
   "status": "Released",
-  "tagline": "The future isn't big enough for the both of them.",
-  "title": "Demolition Man",
+  "tagline": "The one where they get back together.",
+  "title": "Friends: The Reunion",
   "video": false,
-  "vote_average": 6.666,
-  "vote_count": 3143
+  "vote_average": 7.936,
+  "vote_count": 1011
 }

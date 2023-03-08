@@ -1,5 +1,4 @@
-# WORK IN PROGRESS
-## Movie Details Collector
+# Movie Details Collector
 - `MODEC` collects and copies of your selected motion picture's basic details to your target Excel sheet
 
 <img src="docs/guide/target_sheet.png"> 
@@ -56,7 +55,7 @@ pip install -r requirements.txt
 - `Windows` (tested on 10)
 - `Linux` (tested on Mint 21):
     - Window icon will not be displayed
-    - Excel sheets will not open automatically
+    - Excel sheet will not open automatically
     - The checkbox text placement can be off, solution:
         - Change the font style to `Arial` in `settings_db.json \ skins \ [every skin] \ font_style`  
     - `Pyperclip` module: "On Linux, this module makes use of the xclip or xsel commands, which should come with the os. Otherwise run “sudo apt-get install xclip” or “sudo apt-get install xsel” (Note: xsel does not always seem to work.) Otherwise on Linux, you will need the gtk or PyQt4 modules installed. "
@@ -104,7 +103,6 @@ pip install -r requirements.txt
 - os
 - pathlib
 - platform
-- requests
 - sys
 - tkinter
 - webbrowser

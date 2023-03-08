@@ -2,24 +2,22 @@
   "movie_results": [
     {
       "adult": false,
-      "backdrop_path": "/4pl165EUdvveHCr4J4YcHVA1MnD.jpg",
-      "id": 9739,
-      "title": "Demolition Man",
+      "backdrop_path": "/y1BomwRA41Cr8s69G9vVQRjwllp.jpg",
+      "id": 691179,
+      "title": "Friends: The Reunion",
       "original_language": "en",
-      "original_title": "Demolition Man",
-      "overview": "Simon Phoenix, a violent criminal cryogenically frozen in 1996, escapes during a parole hearing in 2032 in the utopia of San Angeles. Police are incapable of dealing with his violent ways and turn to his captor, who had also been cryogenically frozen after being wrongfully accused of killing 30 innocent people while apprehending Phoenix.",
-      "poster_path": "/pxWuGsyzVQSqHWxVQLy4XUcopIL.jpg",
+      "original_title": "Friends: The Reunion",
+      "overview": "The cast of Friends reunites for a once-in-a-lifetime celebration of the hit series, an unforgettable evening filled with iconic memories, uncontrollable laughter, happy tears, and special guests.",
+      "poster_path": "/bT3c4TSOP8vBmMoXZRDPTII6eDa.jpg",
       "media_type": "movie",
       "genre_ids": [
-        80,
-        28,
-        878
+        99
       ],
-      "popularity": 32.671,
-      "release_date": "1993-10-08",
+      "popularity": 25.819,
+      "release_date": "2021-05-27",
       "video": false,
-      "vote_average": 6.666,
-      "vote_count": 3143
+      "vote_average": 7.936,
+      "vote_count": 1011
     }
   ],
   "person_results": [],
