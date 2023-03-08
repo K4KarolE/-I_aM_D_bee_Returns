@@ -34,6 +34,9 @@ pip install -r requirements.txt
 ### Pyperclip
 - https://pypi.org/project/pyperclip/
 
+### Requests
+- https://pypi.org/project/requests/
+
 ### Openpyxl
 - https://pypi.org/project/openpyxl/
 
