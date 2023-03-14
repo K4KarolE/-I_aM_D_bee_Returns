@@ -1,5 +1,5 @@
 {
-  "title": "Friends: The Reunion",
+  "title": "Game of Thrones",
   "poster_open_in_new_tab": 1,
   "title_search": 0,
   "quit_after_run": 0,
@@ -17,7 +17,8 @@
     "Hungarian": "https://www.mafab.hu/search/&search="
   },
   "path_movie_new_record": "D:/Movies_New_Record.xlsx",
-  "skin_selected": "nostromo",
+  "path_movie_db": "",
+  "skin_selected": "initech",
   "skins": {
     "initech": {
       "background_color": "#F0F0F0",

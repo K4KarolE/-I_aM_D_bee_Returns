@@ -1,27 +1,31 @@
 {
-  "movie_results": [
+  "movie_results": [],
+  "person_results": [],
+  "tv_results": [
     {
       "adult": false,
-      "backdrop_path": "/y1BomwRA41Cr8s69G9vVQRjwllp.jpg",
-      "id": 691179,
-      "title": "Friends: The Reunion",
+      "backdrop_path": "/2OMB0ynKlyIenMJWI2Dy9IWT4c.jpg",
+      "id": 1399,
+      "name": "Game of Thrones",
       "original_language": "en",
-      "original_title": "Friends: The Reunion",
-      "overview": "The cast of Friends reunites for a once-in-a-lifetime celebration of the hit series, an unforgettable evening filled with iconic memories, uncontrollable laughter, happy tears, and special guests.",
-      "poster_path": "/bT3c4TSOP8vBmMoXZRDPTII6eDa.jpg",
-      "media_type": "movie",
+      "original_name": "Game of Thrones",
+      "overview": "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond.",
+      "poster_path": "/7WUHnWGx5OO145IRxPDUkQSh4C7.jpg",
+      "media_type": "tv",
       "genre_ids": [
-        99
+        10765,
+        18,
+        10759
       ],
-      "popularity": 25.819,
-      "release_date": "2021-05-27",
-      "video": false,
-      "vote_average": 7.936,
-      "vote_count": 1011
+      "popularity": 607.079,
+      "first_air_date": "2011-04-17",
+      "vote_average": 8.435,
+      "vote_count": 20743,
+      "origin_country": [
+        "US"
+      ]
     }
   ],
-  "person_results": [],
-  "tv_results": [],
   "tv_episode_results": [],
   "tv_season_results": []
 }
