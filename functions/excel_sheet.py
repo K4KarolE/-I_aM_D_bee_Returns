@@ -99,15 +99,18 @@ def write_sheet(title, year_of_release, directors, actors, genres, lengthHour, l
 
 def launch_sheets():
     if platform.system() == 'Windows':
-        settings_data = settings.open_settings()                                # opening the settings_db.json DB
-        full_path_to_MoviesNewRecord = settings_data['path_movie_new_record']
-        os.system(f'start "excel" {full_path_to_MoviesNewRecord}')
+        try:
+            settings_data = settings.open_settings()                                # opening the settings_db.json DB
+            full_path_to_MoviesNewRecord = settings_data['path_movie_new_record']
+            os.system(f'start "excel" "{full_path_to_MoviesNewRecord}"')
+        except:
+              messages.error_pop_up('excel_cant_open')
         # MOVIE DB SHEET                                                        # hardcoded, not available via UI
         full_path_to_Movies_DB = settings_data['path_movie_db']                 
         if full_path_to_Movies_DB != None:  
             try:
-                os.system(f'start "excel" {full_path_to_Movies_DB}')
+                os.system(f'start "excel" "{full_path_to_Movies_DB}"')
             except:
-                pass
+                messages.error_pop_up('excel_cant_open')
     if platform.system() == 'Linux':
         messages.error_pop_up('excel_is_saved')

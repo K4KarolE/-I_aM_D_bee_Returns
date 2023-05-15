@@ -9,6 +9,7 @@ popup_message_dic = {
     'wrong_link': 'Wrong link in clipboard\n\nCopy the IMDb link and click OK',
     'excel_is_open':'Close your sheet and click OK',
     'excel_is_saved':'Data is added to your sheet.',
+    'excel_cant_open':'Was not able to launch the excel sheet.',
     'bye_bye':'You just blew it honey!'
     }
 
