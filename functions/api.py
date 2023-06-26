@@ -104,9 +104,14 @@ def data_collection():
     if media_type == 'movie':
         runtime = details_dic['runtime']
     else:
-        runtime = details_dic['episode_run_time'][0]
+        if details_dic['episode_run_time']:
+            runtime = details_dic['episode_run_time'][0]
+        elif details_dic['last_episode_to_air']['runtime']:
+            runtime = details_dic['last_episode_to_air']['runtime']
+        else:
+            runtime = 0
+            messages.error_pop_up('runtime')
     
-
     lengthHour = int(runtime/60)    # if runtime < 60 -> lengthHour = 0 addressed in excel_sheet.py, will leave it None
     lengthMinute = runtime%60
 

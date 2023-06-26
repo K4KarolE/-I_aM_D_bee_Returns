@@ -10,7 +10,8 @@ popup_message_dic = {
     'excel_is_open':'Close your sheet and click OK',
     'excel_is_saved':'Data is added to your sheet.',
     'excel_cant_open':'Was not able to launch the excel sheet.',
-    'bye_bye':'You just blew it honey!'
+    'bye_bye':'You just blew it honey!',
+    'runtime':'Sorry, no runtime data is available.'
     }
 
 def error_pop_up(popup_message_dic_key):
