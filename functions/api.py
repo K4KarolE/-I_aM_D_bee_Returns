@@ -54,7 +54,7 @@ def data_collection():
     find_dic = json.load(f)
 
     # MOVIE VS. TV - MEDIA DECIDER
-    if find_dic['movie_results'] != []:
+    if find_dic['movie_results']:
         find_dic_active = 'movie_results'
         title_name = 'title'
         title_name_original = 'original_title'

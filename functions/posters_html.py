@@ -20,16 +20,10 @@ def compose():
         poster_template = open(path_posters_temp_html)
         list_poster_template = list(poster_template)
 
-        # FINDING THE INDEX IN THE LIST
-        # n=0
-        # for i in range(len(list_poster_template)):
-        #     print(n, list_poster_template[i])
-        #     n+=1
-        # print(list_poster_template[7])
-        # print(list_poster_template[10])
-
         # TITLE
-        list_poster_template[7] = settings_data['title']
+        for index, item in enumerate(list_poster_template):
+            if 'TITLE_X' in item:
+                list_poster_template[index] = settings_data['title']
 
         # OPEN POSTER LINKS.JSON
         f = open(path__poster_links_json)
@@ -44,7 +38,12 @@ def compose():
         if settings_data['poster_size'] == "Large":
             poster_per_row = 1
 
-        element_index = 10
+        # ELEMENT INDEX
+        for index, item in enumerate(list_poster_template):
+            if 'ELEMENT_X' in item:
+                element_index = index
+        
+        # HTML COMPILING
         list_poster_template[element_index] = '<div align="center">'
         counter = 1
         for index, item in enumerate(poster_links_list):
