@@ -58,10 +58,17 @@ def data_collection():
         find_dic_active = 'movie_results'
         title_name = 'title'
         title_name_original = 'original_title'
-    else:
+
+    elif find_dic['tv_results']:
         find_dic_active = 'tv_results'
         title_name = 'name'
         title_name_original = 'original_name'
+
+    elif find_dic['tv_episode_results']:
+        find_dic_active = 'tv_episode_results'
+        title_name = 'name'
+        title_name_original = 'name'
+
 
     title = find_dic[find_dic_active][0][title_name]
     original_title = find_dic[find_dic_active][0][title_name_original]
@@ -86,6 +93,15 @@ def data_collection():
 
     f = open(path_json('details.json'))
     details_dic = json.load(f)
+
+    ''' ERROR HANDLING '''
+    try:
+        if details_dic['success'] == False:
+            messages.error_pop_up_straight(details_dic['status_message'])
+            return
+    except:
+        pass
+
     # GENRES
     genres = []
     for item in details_dic['genres']:

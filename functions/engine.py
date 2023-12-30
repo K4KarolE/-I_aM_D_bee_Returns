@@ -5,14 +5,21 @@ from functions import posters_html
 
 def start_engine():     # executed with the "Save & Start" button click in main
 
-    title, year_of_release, directors, actors, genres, lengthHour, lengthMinute = api.data_collection()
+    try:
 
-    excel_sheet.write_sheet(title, year_of_release, directors, actors, genres, lengthHour, lengthMinute)
+        title, year_of_release, directors, actors, genres, lengthHour, lengthMinute = api.data_collection()
+        api_data_coll_success = True
+    
+    except:
+        api_data_coll_success = False
 
-    own_language_title.search(title, year_of_release)
+    if api_data_coll_success:
+        excel_sheet.write_sheet(title, year_of_release, directors, actors, genres, lengthHour, lengthMinute)
 
-    excel_sheet.launch_sheets()
+        own_language_title.search(title, year_of_release)
 
-    posters_html.compose()
+        excel_sheet.launch_sheets()
+
+        posters_html.compose()
 
 # start_engine()

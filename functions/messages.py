@@ -16,3 +16,6 @@ popup_message_dic = {
 
 def error_pop_up(popup_message_dic_key):
     tkinter.messagebox.showinfo(error_popup_window_title, f"{popup_message_dic[popup_message_dic_key]}") # tkinter.messagebox.showinfo ( window title, message )
+
+def error_pop_up_straight(message_text):
+    tkinter.messagebox.showinfo(error_popup_window_title, message_text)
