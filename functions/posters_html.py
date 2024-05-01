@@ -60,9 +60,12 @@ def compose():
         # '<div align="center"><img src="https://image.tmdb.org/t/p/w200/wAv2tBzcTlzrRIKlM7s2cjnpxwA.jpg" hspace="20"><img src="https://image.tmdb.org/t/p/w200/wAv2tBzcTlzrRIKlM7s2cjnpxwA.jpg"></div>'
 
         # SAVING HTML
-        file = open(path_posters_html, 'w')
+        file = open(path_posters_html, 'w', encoding="utf-8")
         for i in list_poster_template:
-            file.write(i)
+            try:
+                file.write(i)
+            except:
+                print(f'ERROR writing: {i}')
         file.close()
 
         # OPEN POSTER PAGE
