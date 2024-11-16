@@ -23,6 +23,9 @@ font_style = settings_data['skins'][skin_selected]['font_style']
 font_color = settings_data['skins'][skin_selected]['font_color']
 window_background_color = settings_data['skins'][skin_selected]['window_background_color']
 
+# OS
+os_linux: bool = (sys.platform == 'linux')
+
 # WINDOW
 window = Tk()
 # window.configure(background=window_background_color) FYI - not necessery / not working if the image background color is set
@@ -230,6 +233,11 @@ button_save_and_start = Button(window, text = "Save & Start", command = save_and
 ### DISPLAY WIDGETS
 def display_widgets():
     # BASE VALUES
+    linux_diff_a, linux_diff_b, linux_diff_c = 0, 0, 0
+    if os_linux:
+        linux_diff_a = 15
+        linux_diff_b = 3
+        linux_diff_c = 5
     # X
     x = 150
     x_button_gap = 170
@@ -245,19 +253,19 @@ def display_widgets():
 
     # POSTER CHECKBOX + ROLL DOWN BUTTON
     checkbox['poster'][1].place(x=x, y=y_location(1))
-    poster_roll_down.place(x=x+x_button_gap, y=y_location(1))
+    poster_roll_down.place(x=x+x_button_gap+linux_diff_a, y=y_location(1))
 
     # LOOK FOR NATIVE TITLE + ROLL DOWN BUTTON
     checkbox['title'][1].place(x=x, y=y_location(2))
-    title_search_roll_down.place(x=x+x_button_gap, y=y_location(2))
+    title_search_roll_down.place(x=x+x_button_gap+linux_diff_a, y=y_location(2))
 
      # QUIT AFTER RUN CHECKBOX
     checkbox['quit'][1].place(x=x, y=y_location(3))
 
     # TARGET SHEET PATH - TITEL + FIELD + BUTTON
     target_sheet_field_title.place(x=x+x_gap_for_path_objects, y=y_location(4)+10)
-    target_sheet_field.place(x=x+x_gap_for_path_objects+3, y=y_location(4)+35)
-    target_sheet_button.place(x=x+x_gap_for_path_objects+x_button_gap, y=y_location(4)+23)
+    target_sheet_field.place(x=x+x_gap_for_path_objects+3, y=y_location(4)+35+linux_diff_b)
+    target_sheet_button.place(x=x+x_gap_for_path_objects+x_button_gap+linux_diff_b, y=y_location(4)+23+linux_diff_c)
 
     # SKINS ROLL DOWN BUTTON
     skins_roll_down.place(x=212, y=y_location(6)+10)

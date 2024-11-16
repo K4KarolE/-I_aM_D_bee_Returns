@@ -19,3 +19,6 @@ def error_pop_up(popup_message_dic_key):
 
 def error_pop_up_straight(message_text):
     tkinter.messagebox.showinfo(error_popup_window_title, message_text)
+
+def excel_is_saved():
+    tkinter.messagebox.showinfo('Information', f"{popup_message_dic['excel_is_saved']}")

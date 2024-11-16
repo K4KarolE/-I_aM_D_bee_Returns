@@ -113,4 +113,4 @@ def launch_sheets():
             except:
                 messages.error_pop_up('excel_cant_open')
     if platform.system() == 'Linux':
-        messages.error_pop_up('excel_is_saved')
+        messages.excel_is_saved()
