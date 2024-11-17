@@ -28,7 +28,7 @@ os_linux: bool = (sys.platform == 'linux')
 
 # WINDOW
 window = Tk()
-# window.configure(background=window_background_color) FYI - not necessery / not working if the image background color is set
+# window.configure(background=window_background_color) FYI - not necessary / not working if the image background color is set
 window.title(settings_data['skins'][skin_selected]['window_title'])
 window_width = 500
 window_length = 600
@@ -40,9 +40,9 @@ window.resizable(0,0)   # locks the main window
 # IMAGES
 working_directory = os.path.dirname(__file__)     # os.path.dirname(__file__) = D:\_DEV\Python\31_I_aM_D_bee   //in my case
 path_image = Path(working_directory, "skins", skin_selected, "BG.png")      # Path functions makes the path OS independent, running the program on Windows: ..skins\default.., on Linux: ..skins/default..)
-backgound_image = PhotoImage(file = path_image)
-backgound_image_label = Label(window, image = backgound_image, background=window_background_color)
-backgound_image_label.place(x = -2, y = 0)
+background_image = PhotoImage(file = path_image)
+background_image_label = Label(window, image = background_image, background=window_background_color)
+background_image_label.place(x = -2, y = 0)
 
 if platform.system() == 'Windows':      # will not be visible on Linux, macOS
     path_icon = Path(working_directory, "skins", skin_selected, "icon.ico")
@@ -88,7 +88,7 @@ def change_skin(__):
 
     #IMAGES
     path_image = Path(working_directory, "skins", skin_selected, "BG.png")
-    backgound_image.configure(file = path_image)
+    background_image.configure(file = path_image)
 
     if platform.system() == 'Windows': 
         path_icon = Path(working_directory, "skins", skin_selected, "icon.ico")
@@ -100,8 +100,8 @@ def change_skin(__):
     window_background_color = settings_data['skins'][skin_selected]['window_background_color']
     
     # WINDOW
-    # window.configure(background=window_background_color) FYI - not necessery / not working if the image background color is set
-    backgound_image_label.configure(background=window_background_color)
+    # window.configure(background=window_background_color) FYI - not necessary / not working if the image background color is set
+    background_image_label.configure(background=window_background_color)
 
     # CHECKBOXES
     for item in checkbox.values():
@@ -259,7 +259,7 @@ def display_widgets():
     checkbox['title'][1].place(x=x, y=y_location(2))
     title_search_roll_down.place(x=x+x_button_gap+linux_diff_a, y=y_location(2))
 
-     # QUIT AFTER RUN CHECKBOX
+    # QUIT AFTER RUN CHECKBOX
     checkbox['quit'][1].place(x=x, y=y_location(3))
 
     # TARGET SHEET PATH - TITEL + FIELD + BUTTON

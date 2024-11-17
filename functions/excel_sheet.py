@@ -1,6 +1,7 @@
 import platform
 import os
 import sys
+import subprocess
 from datetime import date
 
 from functions import settings              # from settings_db.json getting the info for the TARGET SHEET and MOVIE DB locations
@@ -98,19 +99,27 @@ def write_sheet(title, year_of_release, directors, actors, genres, lengthHour, l
                     sys.exit()
 
 def launch_sheets():
-    if platform.system() == 'Windows':
-        try:
-            settings_data = settings.open_settings()                                # opening the settings_db.json DB
-            full_path_to_MoviesNewRecord = settings_data['path_movie_new_record']
+    settings_data = settings.open_settings()                                # opening the settings_db.json DB
+    full_path_to_MoviesNewRecord = settings_data['path_movie_new_record']
+    full_path_to_Movies_DB = settings_data['path_movie_db']
+    os_windows = (platform.system() == 'Windows')                 
+    
+   
+    try:
+        if os_windows:
             os.system(f'start "excel" "{full_path_to_MoviesNewRecord}"')
-        except:
-              messages.error_pop_up('excel_cant_open')
-        # MOVIE DB SHEET                                                        # hardcoded, not available via UI
-        full_path_to_Movies_DB = settings_data['path_movie_db']                 
-        if full_path_to_Movies_DB != None:  
-            try:
+        else:
+            subprocess.Popen(["xdg-open", full_path_to_MoviesNewRecord])
+    except:
+            messages.error_pop_up('excel_cant_open')
+    
+    # MOVIE DB SHEET - hardcoded, not available via UI
+    if full_path_to_Movies_DB != None:  
+        try:
+            if os_windows:
                 os.system(f'start "excel" "{full_path_to_Movies_DB}"')
-            except:
-                messages.error_pop_up('excel_cant_open')
-    if platform.system() == 'Linux':
-        messages.excel_is_saved()
+            else:
+                subprocess.Popen(["xdg-open", full_path_to_Movies_DB])
+        except:
+            messages.error_pop_up('excel_cant_open')
+        

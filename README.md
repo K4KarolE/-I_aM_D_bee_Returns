@@ -52,10 +52,7 @@ pip install -r requirements.txt
 - Recommended: `docs\ Movies_New_Record.xlsx`
 
 ### OS
-- `Windows` (tested on 10, 11)
-- `Linux` (tested on Mint 22):
-    - Window icon will not be displayed
-    - Excel sheets will not open automatically
+- Tested on `Windows 11` and `Linux Mint 22`
 
 # Guide
 ## Steps
