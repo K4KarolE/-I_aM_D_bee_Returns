@@ -24,6 +24,9 @@ def data_collection():
     path_api_key = Path(main_directory, 'api_key.txt')
     file = open(path_api_key)
     api_key = file.read()
+    if api_key == "":
+        messages.error_pop_up('api_key_missing')
+        return
     file.close()
 
 ### GET LINK / IMDB ID
