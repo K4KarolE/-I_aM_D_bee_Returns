@@ -35,7 +35,7 @@ window_length = 600
 screen_width = window.winfo_screenwidth()
 screen_height = window.winfo_screenheight()
 window.geometry(f'{window_width}x{window_length}+%d+%d' % (screen_width/2-200, screen_height/2-250))
-window.resizable(0,0)   # locks the main window
+window.resizable(False,False)   # locks the main window
 
 # IMAGES
 working_directory = os.path.dirname(__file__)     # os.path.dirname(__file__) = D:\_DEV\Python\31_I_aM_D_bee   //in my case
@@ -122,6 +122,10 @@ def change_skin(__):
     target_sheet_field_title.configure(foreground=font_color, background=background_color)
     target_sheet_button.configure(foreground=font_color, background=background_color, activeforeground=background_color, activebackground=font_color)
 
+    db_sheet_field.configure(foreground=font_color, background=background_color)
+    db_sheet_field_title.configure(foreground=font_color, background=background_color)
+    db_sheet_button.configure(foreground=font_color, background=background_color, activeforeground=background_color, activebackground=font_color)
+
     # SAVE AND START BUTTON
     button_save_and_start.configure(foreground=font_color, background=background_color, activeforeground=background_color, activebackground=font_color)
 
@@ -162,9 +166,9 @@ poster_roll_down["menu"].config(foreground=font_color, background=background_col
 
 
 ## PATH - FIELDS + SEARCHBOXES
-mandatory_field_text = ' - - MANDATORY - -'
 
 # TARGET SHEET - FIELD + SEARCHBOX
+mandatory_field_text = ' - - MANDATORY - -'
 target_sheet_text = "Target sheet path"
 target_sheet_field = Text(window, height = 1, width = 20, foreground=font_color, background=field_background_color)
 
@@ -184,7 +188,42 @@ def browseSheet_1():
                         ("all files", "*.*")))
     target_sheet_field.delete('1.0', END)       # once a button is clicked, removes the previous value
     target_sheet_field.insert(END,filename)     # adding the path and the name of the selected file
-target_sheet_button = Button(window, text = ">>", command = browseSheet_1, foreground=font_color, background=background_color, activeforeground=background_color, activebackground=font_color)
+target_sheet_button = Button(window,
+                             text = ">>",
+                             command = browseSheet_1,
+                             foreground=font_color,
+                             background=background_color,
+                             activeforeground=background_color,
+                             activebackground=font_color)
+
+# DATABASE SHEET - FIELD + SEARCHBOX
+non_mandatory_field_text = ' - - NON MANDATORY - -'
+db_sheet_text = "Database sheet path"
+db_sheet_field = Text(window, height = 1, width = 20, foreground=font_color, background=field_background_color)
+
+if settings_data['path_movie_db'] == "":        # mandatory field reminder
+    db_sheet_field.insert(END, non_mandatory_field_text)
+else:
+    db_sheet_field.insert(END,settings_data['path_movie_db'])   # set to the latest saved PATH value
+
+db_sheet_field_title = Label(window, text = db_sheet_text, foreground=font_color, background=background_color)
+db_sheet_field_title.config(font =(font_style, 12))
+
+filename = None
+def browseSheet_1():
+    filename = filedialog.askopenfilename(initialdir = "/",
+            title = "Select a File",
+            filetypes = (("Excel sheet", "*.xlsx"),
+                        ("all files", "*.*")))
+    db_sheet_field.delete('1.0', END)       # once a button is clicked, removes the previous value
+    db_sheet_field.insert(END,filename)     # adding the path and the name of the selected file
+db_sheet_button = Button(window,
+                             text = ">>",
+                             command = browseSheet_1,
+                             foreground=font_color,
+                             background=background_color,
+                             activeforeground=background_color,
+                             activebackground=font_color)
 
 
 ### BUTTONS
@@ -203,8 +242,9 @@ def save_and_start():
     settings_data['title_search'] = checkbox['title'][0].get()                              # from CHECKBOXES for loop: variable = item[0] -> item[0] = checkbox['title'][0]
     settings_data['title_search_link_selected'] = title_search_roll_down_clicked.get()      # Hungarian / Czech..
 
-    # TARGET SHEET PATH FIELD
+    # TARGET AND DB SHEET PATH FIELD
     settings_data['path_movie_new_record'] = target_sheet_field.get("1.0", "end-1c")
+    settings_data['path_movie_db'] = db_sheet_field.get("1.0", "end-1c")
 
     # SKINS ROLL DOWN BUTTON
     # FYI: the skin is saved, when it is updated -> next time will load the latest used skin, without the need of the Save & Start button/process  
@@ -267,11 +307,16 @@ def display_widgets():
     target_sheet_field.place(x=x+x_gap_for_path_objects+3, y=y_location(4)+35+linux_diff_b)
     target_sheet_button.place(x=x+x_gap_for_path_objects+x_button_gap+linux_diff_b, y=y_location(4)+23+linux_diff_c)
 
+    # DB SHEET PATH - TITEL + FIELD + BUTTON
+    db_sheet_field_title.place(x=x+x_gap_for_path_objects, y=y_location(6)+10)
+    db_sheet_field.place(x=x+x_gap_for_path_objects+3, y=y_location(6)+35+linux_diff_b)
+    db_sheet_button.place(x=x+x_gap_for_path_objects+x_button_gap+linux_diff_b, y=y_location(6)+23+linux_diff_c)
+
     # SKINS ROLL DOWN BUTTON
-    skins_roll_down.place(x=212, y=y_location(6)+10)
+    skins_roll_down.place(x=212, y=y_location(8)+10)
 
     # SAVE SETTINGS & START BUTTON
-    button_save_and_start.place(x=x+x_gap_for_path_objects+30, y=y_location(8)+10)
+    button_save_and_start.place(x=x+x_gap_for_path_objects+25, y=y_location(9.6)+10)
 
 display_widgets()
 
